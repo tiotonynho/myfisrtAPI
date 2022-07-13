@@ -1,2 +1,2 @@
-Minha primeira API.
-Desenvolvida em aulas coma a Yes We Code.
+Minha primeira API. /n
+Desenvolvida em aulas com a Yes We Code.

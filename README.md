@@ -1,2 +1,2 @@
 Minha primeira API.
-Desenvolvida em aulas com a Yes We Code.
+Desenvolvida através de aulas com a Yes We Code.

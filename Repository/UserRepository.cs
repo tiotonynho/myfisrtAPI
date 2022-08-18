@@ -18,20 +18,20 @@ public class UserRepository : IUserRepository
     {
         using (MySqlConnection connection = new MySqlConnection(_connectionString))
         {
-            return connection.Query<User>("SELECT * FROM tb_usuarios");
+            return connection.Query<User>("SELECT * FROM yes_we_code");
         };
     }
     public User Get(int id)
     {
         using (MySqlConnection connection = new MySqlConnection(_connectionString))
         {
-            var user = connection.QuerySingleOrDefault<User>($"SELECT * FROM tb_usuarios WHERE id = {id}");
+            var user = connection.QuerySingleOrDefault<User>($"SELECT * FROM yes_we_code WHERE id = {id}");
             return user;
         };
     }
     public int InsertUser(User newUser)
     {
-        var sql = "INSERT INTO tb_usuarios VALUES (@id, @Nome, @Idade)";
+        var sql = "INSERT INTO yes_we_code VALUES (@id, @Nome, @Idade)";
 
         User user = new User()
         {
@@ -47,7 +47,7 @@ public class UserRepository : IUserRepository
     }
     public int UpdateUser(int id, string name)
     {
-        var sql = "UPDATE tb_usuarios SET Nome = @Name WHERE id = @id";
+        var sql = "UPDATE yes_we_code SET Nome = @Name WHERE id = @id";
 
         using (MySqlConnection connection = new MySqlConnection(_connectionString))
         {
@@ -56,7 +56,7 @@ public class UserRepository : IUserRepository
     }
     public int DeleteUser(int id)
     {
-        var sql = "DELETE FROM tb_usuarios WHERE id = @id";
+        var sql = "DELETE FROM yes_we_code WHERE id = @id";
 
         using (MySqlConnection connection = new MySqlConnection(_connectionString))
         {
